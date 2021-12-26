@@ -1,4 +1,4 @@
-package com.amanullah.alarmclock
+package com.amanullah.alarmclock.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
