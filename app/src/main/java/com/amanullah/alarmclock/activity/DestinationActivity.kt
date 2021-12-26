@@ -1,6 +1,5 @@
 package com.amanullah.alarmclock.activity
 
-import android.annotation.SuppressLint
 import android.media.RingtoneManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

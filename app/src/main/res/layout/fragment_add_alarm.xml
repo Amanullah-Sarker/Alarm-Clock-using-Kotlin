@@ -16,6 +16,7 @@
         android:textAlignment="center"
         android:textSize="50sp"
         android:textStyle="bold"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         />
 
     <Button
@@ -24,6 +25,7 @@
         android:layout_height="wrap_content"
         android:text="Select Time"
         android:layout_margin="20dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         />
     <Button
         android:id="@+id/setAlarmButtonId"
@@ -31,6 +33,7 @@
         android:layout_height="wrap_content"
         android:text="Set Alarm"
         android:layout_margin="20dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         />
     <Button
         android:id="@+id/cancelAlarmButtonId"
@@ -38,6 +41,7 @@
         android:layout_height="wrap_content"
         android:text="Cancel Alarm"
         android:layout_margin="20dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         />
 
 </LinearLayout>
