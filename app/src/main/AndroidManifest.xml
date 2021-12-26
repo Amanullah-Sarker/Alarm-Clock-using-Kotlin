@@ -22,7 +22,7 @@
             android:name=".activity.DestinationActivity"
             android:exported="true" />
 
-        <receiver android:name=".activity.AlarmReceiver" />
+        <receiver android:name=".adapter.AlarmReceiver" />
     </application>
 
 </manifest>

@@ -18,7 +18,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.amanullah.alarmclock.activity.AlarmReceiver
+import com.amanullah.alarmclock.adapter.AlarmReceiver
 import com.amanullah.alarmclock.databinding.FragmentAddAlarmBinding
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.google.android.material.timepicker.TimeFormat
