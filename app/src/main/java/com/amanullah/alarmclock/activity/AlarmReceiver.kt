@@ -30,7 +30,7 @@ class AlarmReceiver : BroadcastReceiver() {
         val pendingIntent = PendingIntent.getActivity(context, 0, i, 0)
 
         val builder = NotificationCompat.Builder(context!!, "amanullah")
-            .setSmallIcon(R.drawable.aman)
+            .setSmallIcon(R.drawable.notifications)
             .setContentTitle("Amanullah")
             .setContentText("Alarm Manager from Amanullah")
             .setAutoCancel(true)
