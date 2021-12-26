@@ -68,7 +68,7 @@ class DestinationActivity : AppCompatActivity() {
             //track.stop()
 
             alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
-            //val intent = Intent(this, AlarmReceiver::class.java)
+            val intent = Intent(applicationContext, AlarmReceiver::class.java)
             val pendingIntent = PendingIntent.getBroadcast(
                 applicationContext,
                 0,
