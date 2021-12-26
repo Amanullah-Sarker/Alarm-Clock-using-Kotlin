@@ -5,10 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import com.amanullah.alarmclock.R
+import com.amanullah.alarmclock.adapter.MainViewModel
 import com.amanullah.alarmclock.databinding.FragmentAlarmHomeBinding
 
 class AlarmHomeFragment : Fragment() {
+
+    private lateinit var viewModel: MainViewModel
 
     private lateinit var binding: FragmentAlarmHomeBinding
 
@@ -22,6 +26,12 @@ class AlarmHomeFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        activity?.run {
+            viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        } ?: throw Throwable("invalid activity")
+        viewModel.updateActionBarTitle("Home")
+
         binding.floatingActionButton.setOnClickListener {
             replaceFragment(AddAlarmFragment())
         }

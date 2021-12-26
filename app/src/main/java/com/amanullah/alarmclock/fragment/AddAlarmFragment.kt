@@ -18,13 +18,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.amanullah.alarmclock.adapter.AlarmReceiver
+import com.amanullah.alarmclock.adapter.MainViewModel
 import com.amanullah.alarmclock.databinding.FragmentAddAlarmBinding
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.google.android.material.timepicker.TimeFormat
 import java.util.*
 
 class AddAlarmFragment : Fragment() {
+
+    private lateinit var viewModel: MainViewModel
 
     private lateinit var binding: FragmentAddAlarmBinding
 
@@ -46,6 +50,11 @@ class AddAlarmFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        activity?.run {
+            viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        } ?: throw Throwable("invalid activity")
+        viewModel.updateActionBarTitle("Add Alarm")
 
         val date = Date()
         val timeFormat = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {

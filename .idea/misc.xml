@@ -8,6 +8,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1537037037037037" />
         <entry key="app/src/main/res/layout/fragment_add_alarm.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_alarm_home.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_destination.xml" value="0.19322916666666667" />
       </map>
     </option>
   </component>

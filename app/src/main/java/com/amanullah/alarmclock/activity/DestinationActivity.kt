@@ -1,21 +1,19 @@
 package com.amanullah.alarmclock.activity
 
+import android.app.AlarmManager
+import android.app.PendingIntent
+import android.content.Context
+import android.content.Intent
+import android.media.Ringtone
 import android.media.RingtoneManager
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.amanullah.alarmclock.R
+import com.amanullah.alarmclock.adapter.AlarmReceiver
 import com.amanullah.alarmclock.databinding.ActivityDestinationBinding
 import kotlin.random.Random
-import android.app.AlarmManager
-
-import android.app.PendingIntent
-import android.content.Context
-
-import android.content.Intent
-import android.media.Ringtone
-import android.net.Uri
-import com.amanullah.alarmclock.adapter.AlarmReceiver
-
 
 class DestinationActivity : AppCompatActivity() {
 
@@ -29,6 +27,9 @@ class DestinationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDestinationBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setSupportActionBar(binding.toolbar)
+        supportActionBar!!.title = "Snooze"
 
         alarm = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM)
         track = RingtoneManager.getRingtone(applicationContext, alarm)
@@ -47,11 +48,8 @@ class DestinationActivity : AppCompatActivity() {
 
             if (answer == result) {
                 stop()
-
-                Toast.makeText(applicationContext, "Pass", Toast.LENGTH_SHORT).show()
             } else {
                 play()
-                Toast.makeText(applicationContext, "Fail", Toast.LENGTH_SHORT).show()
             }
         }
     }
