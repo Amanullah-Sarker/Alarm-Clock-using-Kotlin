@@ -14,7 +14,7 @@ import com.amanullah.alarmclock.activity.DestinationActivity
 
 class AlarmReceiver : BroadcastReceiver() {
 
-    private lateinit var fragmentManager: FragmentManager
+    //private lateinit var fragmentManager: FragmentManager
 
     override fun onReceive(context: Context?, intent: Intent?) {
 
