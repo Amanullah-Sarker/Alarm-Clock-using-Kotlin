@@ -46,7 +46,6 @@ class AddAlarmFragment : Fragment() {
         return binding.root
     }
 
-    @SuppressLint("SimpleDateFormat")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         val date = Date()
@@ -77,6 +76,7 @@ class AddAlarmFragment : Fragment() {
 
     private fun cancelAlarm() {
         alarmManager = requireActivity().getSystemService(AppCompatActivity.ALARM_SERVICE) as AlarmManager
+
         val intent = Intent(context, AlarmReceiver::class.java)
 
         pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0)
@@ -88,12 +88,12 @@ class AddAlarmFragment : Fragment() {
     private fun setAlarm() {
         alarmManager = requireActivity().getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val intent = Intent(context, AlarmReceiver::class.java)
-
         pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0)
-
         alarmManager.setRepeating(
-            AlarmManager.RTC_WAKEUP, calendar.timeInMillis,
-            AlarmManager.INTERVAL_DAY, pendingIntent
+            AlarmManager.RTC_WAKEUP,
+            calendar.timeInMillis,
+            AlarmManager.INTERVAL_FIFTEEN_MINUTES,
+            pendingIntent
         )
 
         Toast.makeText(context, "Alarm set successfully", Toast.LENGTH_SHORT).show()
