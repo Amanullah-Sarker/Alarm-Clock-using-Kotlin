@@ -15,4 +15,9 @@
         android:name="com.amanullah.alarmclock.fragment.AddAlarmFragment"
         android:label="fragment_add_alarm"
         tools:layout="@layout/fragment_add_alarm" />
+    <fragment
+        android:id="@+id/destinationFragment"
+        android:name="com.amanullah.alarmclock.DestinationFragment"
+        android:label="fragment_destination"
+        tools:layout="@layout/fragment_destination" />
 </navigation>
